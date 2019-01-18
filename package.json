@@ -17,5 +17,7 @@
     "jest": "^23.6.0",
     "regenerator-runtime": "^0.13.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
 }
