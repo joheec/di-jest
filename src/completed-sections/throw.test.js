@@ -5,15 +5,15 @@ class ConfigError extends Error {
   }
 }
 
-function compileAndroidCode() {
-  throw new ConfigError('you are using the wrong JDK');
+function attempt() {
+  throw new ConfigError('you\'re attempt failed');
 }
 
 test('toThrow', () => {
-  expect(compileAndroidCode).toThrow();
-  expect(compileAndroidCode).toThrow(ConfigError);
+  expect(attempt).toThrow();
+  expect(attempt).toThrow(ConfigError);
 
   // Can check exact error message or regexp
-  expect(compileAndroidCode).toThrow('you are using the wrong JDK');
-  expect(compileAndroidCode).toThrow(/JDK/);
+  expect(attempt).toThrow('you\'re attempt failed');
+  expect(attempt).toThrow(/fail/);
 });
