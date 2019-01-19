@@ -6,6 +6,7 @@ const {
 // **NOTE: General asychronous testing notes
 // `.assertions` Verifies that a certain number of assertions are called. Good for asynchronous tests
 // Returning a promise from a test forces Jest to wait for that promise to resolve.
+// Using Jest to test Throw is in throw.test.js
 
 test('Return promise forces Jest to wait for promise to resolve/rejct', () => {
   return fetchResolve();
