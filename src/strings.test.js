@@ -1,4 +1,4 @@
-// Checks regular expressions
+// Can check regular expressions
 
 test('not toMatch', () => {
   expect('team').not.toMatch(/I/);
@@ -6,4 +6,5 @@ test('not toMatch', () => {
 
 test('toMatch', () => {
   expect('Christoph').toMatch(/stop/);
+  expect('Portland').toMatch('Portland');
 });

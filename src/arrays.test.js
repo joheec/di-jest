@@ -1,10 +1,10 @@
-const shoppingList = [
-  'diapers',
-  'kleenex',
-  'beer',
-];
-
 test('toContain', () => {
+  const shoppingList = [
+    'diapers',
+    'kleenex',
+    'beer',
+  ];
+
   const item = shoppingList[0];
   expect(shoppingList).toContain(item);
 });

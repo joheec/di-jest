@@ -6,18 +6,22 @@ describe('jest-changed-files', () => {
   // Unable to get to print out useful info
   test('Changed files and repos via git', () => {
     // need path to test file, including file name
-    getChangedFilesForRoots(['./src/completed-sections/troubleshooting.test.js'], {
+    getChangedFilesForRoots(['./src/troubleshooting.test.js'], {
       lastCommit: false,
       withAncestor: true,
     })
-      .then(result => console. log(result))
-      .catch(err => console.log(err)) ;
+      .then(result => {
+        //console. log(result)
+      })
+      .catch(err => console.log(err));
   });
   
   // Unable to get to print out useful info
   test('findRepos', () => {
-    findRepos(['./src/completed-sections/troubleshooting.test.js'])
-      .then(repos => console.log(repos))
+    findRepos(['./src/troubleshooting.test.js'])
+      .then(repos => {
+        // console.log(repos)
+      });
   });
 });
 
@@ -28,7 +32,7 @@ describe('jest-diff', () => {
     const b = { a: { b: { c: 6 } } };
 
     const result = diff(a, b);
-    console.log(result);
+    //console.log(result);
   });
 });
 
@@ -45,7 +49,7 @@ describe('jest-docblock', () => {
     `;
 
     // prints an object w/ two attributes: comments and pragmas.
-    console.log( parseWithComments(code));
+    //console.log( parseWithComments(code));
   });
 });
 
@@ -108,7 +112,7 @@ describe('jest-worker', () => {
         worker.fetchResolve(),
       ]);
 
-      console.log(results);
+      //console.log(results);
     }
   });
 });
@@ -122,6 +126,6 @@ describe('pretty-format', () => {
     val.map = new Map([['prop', 'value']]);
     val.array = [-0, Infinity, NaN];
     
-    console.log(prettyFormat(val));
+    //console.log(prettyFormat(val));
   });
 });
