@@ -7,9 +7,9 @@ const { fetchCallback } = require('./asyncSetup');
 test('Callback will execute as intended.', done => {
   function callback(data) {
     expect(data).toBe('success');
-    console.log('Executes callback');
+    // console.log('Executes callback');
     done()
   }
   fetchCallback(callback);
-  console.log('Completes execution after completing callback');
+  // console.log('Completes execution after completing callback');
 });

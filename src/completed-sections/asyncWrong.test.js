@@ -7,6 +7,6 @@ test('Callback will not execute as intended by default.', () => {
     console.log('Does not reach here');
   }
   fetchCallback(callback);
-  console.log('Completes execution before completing callback');
+  // console.log('Completes execution before completing callback');
 });
 
