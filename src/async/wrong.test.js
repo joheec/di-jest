@@ -1,4 +1,4 @@
-const { fetchCallback }  = require('./asyncSetup');
+const { fetchCallback }  = require('./setup');
 
 describe('Incorrect way to test an async function', () => {
   // Jest test complete once they reach the end of their execution

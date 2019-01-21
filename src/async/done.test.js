@@ -1,4 +1,4 @@
-const { fetchCallback } = require('./asyncSetup');
+const { fetchCallback } = require('./setup');
 
 // **NOTE: Better to use patterns in asyncRight.test.js
 // **NOTE: This is in its own file because just by having `done` in the parameters triggers waiting for all async functions in this file.

@@ -1,7 +1,7 @@
 const {
   fetchResolve,
   fetchReject,
-} = require('./asyncSetup');
+} = require('./setup');
 
 // **NOTE: General asychronous testing notes
 // `.assertions` Verifies that a certain number of assertions are called. Good for asynchronous tests

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Cities } from './mockImportSetup.js';
+import { Cities } from './importSetup.js';
 // jest.mock is hoisted to the top of its scope, not the top of Program.
 // jest.mock needs to be in the same scope as the import of axios
 jest.mock('axios');
@@ -26,8 +26,8 @@ describe('mocking the axios module used in Cities', () => {
 describe('mocking function created in another module', () => {
   // jest.mock is hoisted to the top of its scope, not the top of Program.
   // jest.mock needs to be in the same scope as the import of ReturnTrue
-  jest.mock('./mockImportSetup.js');
-  const { ReturnTrue } = require('./mockImportSetup.js');
+  jest.mock('./importSetup.js');
+  const { ReturnTrue } = require('./importSetup.js');
 
   test('imported function is replaced', () => {
     ReturnTrue.mockImplementation(() => false);
