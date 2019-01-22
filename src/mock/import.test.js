@@ -8,7 +8,7 @@ describe('mocking the axios module used in Cities', () => {
   test('mock axios.get response with mockResolvedValue', () => {
     const mockedResponse = { city: 'Portland' };
     axios.get.mockResolvedValue(mockedResponse);
-    // Need to return the promise. More details in asyncCorrect.test.js.
+    // Need to return the promise. More details in async/correct.test.js.
     return Cities.all()
       .then(cities => expect(cities).toEqual(mockedResponse));
   });
@@ -17,7 +17,7 @@ describe('mocking the axios module used in Cities', () => {
     const mockedResponse = { city: 'Austin' };
     // Returns a promise to mimic the original axios.get implementation
     axios.get.mockImplementation(() => Promise.resolve(mockedResponse));
-    // Need to return the promise. More details in asyncCorrect.test.js.
+    // Need to return the promise. More details in async/correct.test.js.
     return Cities.all()
       .then(cities => expect(cities).toEqual(mockedResponse));
   });

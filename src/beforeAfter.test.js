@@ -13,7 +13,7 @@ const clear = () => {
 // `describe` is used for scoping before and after to specific tests. Example in scope.test.js.
 describe('each', () => {
   // if initialize or clear were promises, would want them returned in beforeEach/afterEach
-  // Reference asyncRight.test.js
+  // Reference async/correct.test.js
   beforeEach(() => {
     initialize();
     // if initialize is a promise
