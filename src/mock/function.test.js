@@ -182,3 +182,10 @@ describe('Using mock for method chaining', () => {
     expect(currentCity.state).toMatch('Maine');
   });
 });
+
+describe('mock property tests', () => {
+  test('mock name', () => {
+    const mockFunc = jest.fn().mockName('a mock name');
+    expect(mockFunc.getMockName()).toBe('a mock name');
+  });
+});
