@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main snapshot tools generated serialized value for React tree 1`] = `
+<div>
+  Portland, ME
+</div>
+`;
+
+exports[`property matchers generated fields will fail every time 1`] = `
+Object {
+  "createdAt": 2019-01-28T19:33:58.109Z,
+  "id": 6,
+  "name": "DiJest",
+}
+`;
+
+exports[`property matchers generated fields will pass every time 1`] = `
+Object {
+  "createdAt": Any<Date>,
+  "id": Any<Number>,
+  "name": "DiJest",
+}
+`;
