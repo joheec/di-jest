@@ -13,16 +13,16 @@ describe('Mocking passed in function', () => {
           callback(items[index][0], items[index][1]);
       }
   }
-  
+
   const items = [
     // params for the first execution of the callback
     ['first param', 'second param'],
     // params for the secont execution of the callback
     ['third param', 'fourth param'],
   ];
-  
+
   const formatArg = arg => arg.match(/^.*(?=( param))/)[0];
-  
+
   // Mock the callback parameter of the forEach function
   const mockCallback = jest.fn((x, y) => (
     formatArg(x) + ' and ' + formatArg(y) + ' args'
@@ -34,7 +34,7 @@ describe('Mocking passed in function', () => {
       expect(mockCallback.mock.calls.length).toBeGreaterThan(timesCalled - 1);
       expect(mockCallback).toHaveBeenCalledTimes(2);
   });
-  
+
   test('mocked function was called at least once', () => {
     expect(mockCallback).toBeCalled();
   });
@@ -51,17 +51,17 @@ describe('Mocking passed in function', () => {
     expect(mockCallback.mock.calls[mockCallback.mock.calls.length-1])
       .toEqual(['third param', 'fourth param']);
   });
-  
+
   test('First parameter of the first call to the function', () => {
     // mockCallbacks.mock.calls[call_index][parameter_index]
     expect(mockCallback.mock.calls[0][0]).toBe('first param');
   });
-  
+
   test('First parameter of the second call to the function', () => {
     // mockCallbacks.mock.calls[call_index][parameter_index]
     expect(mockCallback.mock.calls[1][0]).toBe('third param');
   });
-  
+
   test('Returned value of the first call', () => {
     // mockCallbacks.mock.results[call_index].value
     expect(mockCallback.mock.results[0].value).toMatch('first and second args');
@@ -78,7 +78,7 @@ describe('Mock function instances', () => {
   const instanceTwo = mockedFunction;
   instanceTwo();
 
-  // third instantiation of mockedFunction 
+  // third instantiation of mockedFunction
   const bound = { city: 'Portland' };
   // bound to the constructor of mockedFunction
   const instanceThree = mockedFunction.bind(bound);
@@ -100,7 +100,7 @@ describe('Mocking returned values', () => {
   // const mockedFunction = jest.fn();
   // console.log(mockedFunction())
   // >> undefined
-  
+
   const values = {
     first: 1,
     second: 2,
