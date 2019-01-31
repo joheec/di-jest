@@ -1,3 +1,11 @@
+describe('mock specific tests', () => {
+  test('mock name', () => {
+    const mockFunc = jest.fn().mockName('a mock name');
+    expect(mockFunc.getMockName()).toBe('a mock name');
+  });
+});
+
+// Scenarios to use mock and things to test
 describe('Mocking passed in function', () => {
   // Mocking a function gives access to inspect the mock's state
   function forEach(items, callback) {
@@ -24,6 +32,7 @@ describe('Mocking passed in function', () => {
   test('Number of times mocked function is called.', () => {
       const timesCalled = items.length;
       expect(mockCallback.mock.calls.length).toBeGreaterThan(timesCalled - 1);
+      expect(mockCallback).toHaveBeenCalledTimes(2);
   });
   
   test('mocked function was called at least once', () => {
@@ -32,6 +41,7 @@ describe('Mocking passed in function', () => {
 
   test('mocked function was called at least once with specific parameters', () => {
     expect(mockCallback).toBeCalledWith('third param', 'fourth param');
+    expect(mockCallback).toHaveBeenLastCalledWith('third param', 'fourth param');
     // Is not working as expected
     // expect(mockCallback.mock.calls).toContain(['first param', 'second param']);
   });

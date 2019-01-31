@@ -1,3 +1,5 @@
+// before/after each/all TESTS in scope
+
 let cities = {};
 
 const initialize = () => {
