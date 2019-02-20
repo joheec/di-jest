@@ -15,7 +15,7 @@ describe('jest-changed-files', () => {
       })
       .catch(err => console.log(err));
   });
-  
+
   // Unable to get to print out useful info
   test('findRepos', () => {
     findRepos(['./src/troubleshooting.test.js'])
@@ -79,7 +79,7 @@ describe('jest-validate', () => {
     const config = {
       transform: '<rootDir>/node_modules/my-custom-tranform',
     };
-    
+
     // Second param contains example config and other options
     const result = validate(config, {
       comment: 'Documentation: http://custom-docs.com',
@@ -102,7 +102,7 @@ describe('jest-worker', () => {
 
   test('parallelization of tasks', () => {
     const Worker = require('jest-worker');
-    
+
     async function main() {
       const worker = new Worker(require.resolve(fetchResolve));
 
@@ -125,7 +125,7 @@ describe('pretty-format', () => {
     val[Symbol('foo')] = 'foo';
     val.map = new Map([['prop', 'value']]);
     val.array = [-0, Infinity, NaN];
-    
+
     //console.log(prettyFormat(val));
   });
 });

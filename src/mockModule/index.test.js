@@ -2,6 +2,9 @@
 // because it is a core Node module
 jest.mock('fs');
 
+// jest.mock(path, [moduleFactory=function])
+// moduleFactory: function that returns the mock
+
 describe('mocked core Node module', () => {
   const MOCK_FILE_INFO = {
     '/path/to/file1.js': 'console.log("file1 contents");',

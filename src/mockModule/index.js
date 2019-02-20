@@ -7,4 +7,7 @@ function listFiles(directory) {
   }));
 }
 
+export default class esSixClass {
+}
+
 exports.listFiles = listFiles;
